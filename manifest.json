@@ -1,0 +1,18 @@
+{
+  "manifest_version": 2,
+  "name": "Averting Disasters in Production",
+  "description": "This extension alerts developers when they are on the live site, so potentially dangerous and accidental changes are avoided.",
+  "version": "1.0",
+  "author": "Sagar Shah",
+  "permissions": [
+    "activeTab"
+  ],
+  "content_scripts": [
+    {
+      "matches": ["*://*.vhx.tv/*"],
+      "js": ["content.js"],
+      "css": ["content.css"],
+      "run_at": "document_idle"
+    }
+  ]
+}
